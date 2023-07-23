@@ -2,7 +2,7 @@
 const readline = require("readline");
 
 // Create a readline interface to interact with the user via the command line
-const rl = readline.createInterface({
+const rl = readline.createInterface({.
   input: process.stdin,
   output: process.stdout,
 });
