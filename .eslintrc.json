@@ -1,13 +1,15 @@
 {
   "env": {
-    "node": true,
-    "es6": true
+    "node": true, // Enables Node.js global variables and Node.js-specific rules
+    "es6": true   // Enables ES6 syntax support
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"], // Include Prettier recommended rules
+  "extends": "eslint:recommended", // Extends ESLint's recommended rule set
   "parserOptions": {
-    "ecmaVersion": 2021
+    "ecmaVersion": 2021 // Set ECMAScript version to ES12 (2021)
   },
   "rules": {
-    // Custom ESLint rules
+    // Custom ESLint rules can be added/modified here
+    // For example, to enforce a maximum line length of 80 characters:
+    // "max-len": ["error", { "code": 80 }]
   }
 }
