@@ -1,0 +1,36 @@
+name: JavaScript CI
+
+# triggers
+on:
+
+  # will trigger on pull request when a file chances / when the PR was labeled
+  pull_request:
+    types: [opened, labeled, synchronize]
+
+  # Will trigger on merge to master when a file related to the service changes
+  push:
+    branches: [master]
+
+  # Will trigger on published releases (production build and deployment)
+  release:
+    types: [published]
+
+# CI Jobs
+jobs:
+  # Validating source code linting and formatting
+  lint-and-format:
+    # Run only on pull requests
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: install dependencies
+        run: |
+          npm install
+      - name: Check code style (eslint)
+        continue-on-error: true
+        run: npm run lint
