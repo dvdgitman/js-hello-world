@@ -1,5 +1,17 @@
 {
   "devDependencies": {
+    "eslint": "^8.45.0",
     "prettier": "^3.0.0"
-  }
+  },
+  "name": "js-hello-world",
+  "description": "Here I will do a JS demo project",
+  "version": "1.0.0",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node helloworld.js",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
+  },
+  "author": "",
+  "license": "ISC"
 }
