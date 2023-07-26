@@ -15,3 +15,24 @@ if (hour >= 6 && hour < 12) {
 }
 
 console.log("It's " + hour + Hour);
+
+let day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Sunday");
+        break;
+    case 2:
+        console.log("Monday");
+        break;
+    case 3:
+        console.log("Tuesday");
+        break;
+    // ... and so on for other days ...
+    default:
+        console.log("Invalid day");
+        break;
+}
+
+
+
