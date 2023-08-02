@@ -18,6 +18,13 @@ console.log("It's " + hour + Hour);
 
 let day = 3;
 
+const messages = [
+    "Sunday",
+    "Monday"
+]
+
+console.log(messages[day-1])
+
 switch (day) {
     case 1:
         console.log("Sunday");
