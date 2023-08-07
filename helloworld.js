@@ -1,3 +1,7 @@
+const Gender = {
+  MALE: Symbol("male"),
+  FEMALE: Symbol("female")
+}
 class Person {
   constructor(name, age, sex) {
     this.name = name;
@@ -6,7 +10,7 @@ class Person {
   }
 
   transgender() {
-    if (this.sex == "male") {
+    if (this.sex == Gender.MALE) {
       this.sex = "female";
     }
     else if (this.sex == "female"){
@@ -39,3 +43,8 @@ console.log(killme.name)
 
 killme.name = "fuckmedaddy"
 killme.sayHello()
+
+let x = Symbol("x");
+let y = Symbol("x");
+
+console.log(new Date(2019,1,1));
